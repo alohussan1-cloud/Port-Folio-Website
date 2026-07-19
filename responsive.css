@@ -1,0 +1,157 @@
+/* =========================================================
+   ALI HASSAN — PORTFOLIO RESPONSIVENESS
+   All @media rules live here, separate from style.css.
+   Breakpoints: 1024 / 860 / 640 / 480 / 360
+========================================================= */
+
+/* Extra safety net: never allow horizontal scroll no matter
+   what content/animation runs on a small screen. */
+html, body{ max-width: 100%; overflow-x: hidden; }
+* { overflow-wrap: break-word; }
+
+/* =========================================================
+   1024px — LAPTOP / SMALL LAPTOP
+========================================================= */
+@media (max-width: 1024px){
+  section{ padding: 90px 0; }
+
+  .hero-container{ grid-template-columns: 1fr; text-align: center; }
+  .hero-text{ order: 2; }
+  .hero-visual{ order: 1; margin-bottom: 20px; }
+  .hero-desc{ margin-left: auto; margin-right: auto; }
+  .hero-buttons, .social-icons{ justify-content: center; }
+  .eyebrow{ justify-content: center; }
+
+  .about-grid{ grid-template-columns: 1fr; }
+  .about-image{ max-width: 380px; width: 100%; margin: 0 auto; }
+
+  .skills-grid, .services-grid, .projects-grid{ grid-template-columns: repeat(2, 1fr); }
+  .stats-grid{ grid-template-columns: repeat(2, 1fr); }
+  .contact-grid{ grid-template-columns: 1fr; }
+  .footer-grid{ grid-template-columns: 1fr 1fr; }
+}
+
+/* =========================================================
+   860px — TABLET / MOBILE NAV SWITCH
+========================================================= */
+@media (max-width: 860px){
+  .nav-container{ padding: 0 24px; }
+
+  .nav-links{
+    position: fixed; top: 0; right: -100%; height: 100vh; width: min(78vw, 320px);
+    max-width: 100%;
+    background: rgba(9,9,11,.97); backdrop-filter: blur(20px);
+    flex-direction: column; justify-content: center; align-items: center; gap: 30px;
+    transition: right .35s cubic-bezier(.22,1,.36,1); border-left: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+  }
+  .nav-links.open{ right: 0; }
+  .hamburger{ display: flex; }
+
+  .avatar-ring{ width: 280px; height: 280px; }
+  .avatar-img{ width: 250px; height: 250px; }
+}
+
+/* =========================================================
+   640px — LARGE PHONE
+========================================================= */
+@media (max-width: 640px){
+  section{ padding: 70px 0; }
+
+  .section-container{ padding: 0 20px; }
+  .hero-container{ padding: 0 20px; }
+  .nav-container{ padding: 0 20px; }
+
+  .hero{ padding-top: 90px; }
+  .avatar-ring{ width: 220px; height: 220px; }
+  .avatar-img{ width: 194px; height: 194px; }
+  .floating-chip{ display: none; }
+
+  .section-title{ font-size: clamp(1.6rem, 6vw, 2.1rem); }
+  .section-sub{ margin-bottom: 40px; }
+
+  .skills-grid, .services-grid, .projects-grid{ grid-template-columns: 1fr; }
+  .stats-grid{ grid-template-columns: 1fr 1fr; gap: 14px; }
+  .stat-card{ padding: 24px 14px; }
+
+  .about-image{ max-width: 300px; }
+  .about-badge{
+    right: 0; bottom: -16px; padding: 12px 16px;
+  }
+  .badge-num{ font-size: 1.4rem; }
+  .badge-label{ font-size: .68rem; max-width: 90px; }
+
+  .form-row{ grid-template-columns: 1fr; }
+  .contact-form{ padding: 24px; }
+  .contact-detail{ flex-wrap: wrap; }
+
+  .footer-grid{ grid-template-columns: 1fr; text-align: center; gap: 32px; }
+  .footer-brand p{ margin-left: auto; margin-right: auto; }
+  .footer-links{ align-items: center; }
+
+  .timeline{ padding-left: 26px; }
+  .timeline-dot{ left: -26px; }
+  .timeline-content{ padding: 16px 18px; }
+
+  .testimonial-card{ padding: 28px 20px; }
+  .quote{ font-size: .95rem; }
+
+  .project-links{ flex-wrap: wrap; }
+
+  .back-to-top{ width: 42px; height: 42px; bottom: 20px; right: 20px; }
+}
+
+/* =========================================================
+   480px — STANDARD PHONE
+========================================================= */
+@media (max-width: 480px){
+  .hero-text h1{ font-size: 2rem; }
+  .typed-wrap{ font-size: 1.1rem; }
+  .hero-desc{ font-size: .95rem; }
+
+  .btn{ padding: 12px 22px; font-size: .88rem; }
+  .hero-buttons{ gap: 12px; }
+
+  .avatar-ring{ width: 190px; height: 190px; }
+  .avatar-img{ width: 168px; height: 168px; }
+
+  .skill-card{ padding: 22px 18px; }
+  .service-card{ padding: 30px 22px; }
+  .project-body{ padding: 18px; }
+
+  .stats-grid{ grid-template-columns: 1fr 1fr; }
+  .stat-num{ font-size: 1.9rem; }
+
+  .social-icon{ width: 38px; height: 38px; }
+  .social-icon svg{ width: 16px; height: 16px; }
+
+  .logo{ font-size: 1.1rem; }
+}
+
+/* =========================================================
+   360px — SMALL PHONE
+========================================================= */
+@media (max-width: 360px){
+  .section-container{ padding: 0 16px; }
+  .hero-container{ padding: 0 16px; }
+  .nav-container{ padding: 0 16px; }
+
+  .hero-text h1{ font-size: 1.75rem; }
+  .eyebrow{ font-size: .72rem; }
+
+  .avatar-ring{ width: 170px; height: 170px; }
+  .avatar-img{ width: 150px; height: 150px; }
+
+  .about-badge{ padding: 10px 14px; }
+  .badge-num{ font-size: 1.2rem; }
+  .badge-label{ max-width: 74px; font-size: .62rem; }
+
+  .stats-grid{ gap: 10px; }
+  .stat-card{ padding: 18px 10px; }
+  .stat-num{ font-size: 1.6rem; }
+
+  .contact-form{ padding: 18px; }
+  .testimonial-card{ padding: 22px 16px; }
+
+  .btn{ padding: 11px 18px; font-size: .84rem; }
+}
