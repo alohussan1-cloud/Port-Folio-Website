@@ -1,9 +1,5 @@
-/* =========================================================
-   ALI HASSAN — PORTFOLIO SCRIPT
-========================================================= */
 
 document.addEventListener('DOMContentLoaded', function () {
-
   /* ---------- LOADER ---------- */
   var loader = document.getElementById('loader');
   window.addEventListener('load', function () {
@@ -16,17 +12,12 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('year').textContent = new Date().getFullYear();
 
   /* ---------- CURSOR GLOW ---------- */
-  var glow = document.getElementById('cursorGlow');
-  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    document.addEventListener('mousemove', function (e) {
-      glow.style.left = e.clientX + 'px';
-      glow.style.top = e.clientY + 'px';
-      glow.classList.add('active');
-    });
-    document.addEventListener('mouseleave', function () {
-      glow.classList.remove('active');
-    });
-  }
+  let glow = document.getElementById('cursorGlow');
+
+  document.addEventListener("mousemove", (e)=>{
+        glow.style.left= e.clientX + "px"
+        glow.style.top = e.clientY + "px"
+  })
 
   /* ---------- TYPED.JS ---------- */
   if (typeof Typed !== 'undefined') {
