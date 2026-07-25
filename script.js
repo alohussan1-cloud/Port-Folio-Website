@@ -86,8 +86,8 @@
 
 
   /* ---------- SCROLL REVEAL ---------- */
-  var revealEls = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
-  var revealObserver = new IntersectionObserver(function (entries, obs) {
+  let reveal = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+  let Observer = new IntersectionObserver(function (entries, obs) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
         entry.target.classList.add('in-view');
@@ -96,7 +96,7 @@
     });
   }, { threshold: 0.15 });
 
-  revealEls.forEach(function (el) { revealObserver.observe(el); });
+  reveal.forEach(function (el) { revealObserver.observe(el); });
 
   /* ---------- SKILL PROGRESS BARS ---------- */
   var progressFills = document.querySelectorAll('.progress-fill');
