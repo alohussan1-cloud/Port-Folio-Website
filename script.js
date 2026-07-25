@@ -1,7 +1,9 @@
+/* =========================================================
+   ALI HASSAN — PORTFOLIO SCRIPT
+========================================================= */
 
-document.addEventListener('DOMContentLoaded', function () {
   /* ---------- LOADER ---------- */
-  var loader = document.getElementById('loader');
+  let loader = document.getElementById('loader');
   window.addEventListener('load', function () {
     setTimeout(function () {
       loader.classList.add('hidden');
@@ -12,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('year').textContent = new Date().getFullYear();
 
   /* ---------- CURSOR GLOW ---------- */
-  let glow = document.getElementById('cursorGlow');
+  const glow = document.getElementById('cursorGlow');
 
   document.addEventListener("mousemove", (e)=>{
         glow.style.left= e.clientX + "px"
@@ -39,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* ---------- NAVBAR SCROLL STATE ---------- */
-  var navbar = document.getElementById('navbar');
+  let navbar = document.getElementById('navbar');
   function handleNavbarScroll() {
     if (window.scrollY > 40) {
       navbar.classList.add('scrolled');
@@ -51,38 +53,37 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', handleNavbarScroll);
 
   /* ---------- HAMBURGER MENU ---------- */
-  var hamburger = document.getElementById('hamburger');
-  var navLinks = document.getElementById('navLinks');
+  let hamburger = document.getElementById('hamburger');
+  let navLinks = document.getElementById('navLinks');
 
-  hamburger.addEventListener('click', function () {
-    var isOpen = navLinks.classList.toggle('open');
-    hamburger.classList.toggle('open', isOpen);
-    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
+  hamburger.addEventListener("click", ()=>{
+    hamburger.classList.toggle("open")
+    navLinks.classList.toggle("open")
+  })
 
-  var navLinkItems = document.querySelectorAll('.nav-link');
-  for (var i = 0; i < navLinkItems.length; i++) {
-    navLinkItems[i].addEventListener('click', function () {
-      navLinks.classList.remove('open');
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-    });
-  }
 
+  
   /* ---------- ACTIVE SECTION HIGHLIGHT ---------- */
-  var sections = document.querySelectorAll('main section[id], .hero[id]');
-  var sectionObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        var id = entry.target.getAttribute('id');
-        navLinkItems.forEach(function (link) {
-          link.classList.toggle('active', link.dataset.section === id);
-        });
-      }
-    });
-  }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+  let navLinkItems = document.querySelectorAll('.nav-link');
+  let sections = document.querySelectorAll('section');
 
-  sections.forEach(function (sec) { sectionObserver.observe(sec); });
+  window.addEventListener('scroll', ()=>{
+    let current = ""
+    sections.forEach((section)=>{
+      let sectionTop = section.offsetTop
+      if(scrollY >= sectionTop - 200){
+        current = section.getAttribute("id")
+      }
+    })
+    navLinkItems.forEach((link)=>{
+      link.classList.remove("active")
+      if(link.dataset.section== current){
+        link.classList.add("active")
+      }
+    })
+  })
+
+
 
   /* ---------- SCROLL REVEAL ---------- */
   var revealEls = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
@@ -220,5 +221,3 @@ document.addEventListener('DOMContentLoaded', function () {
     contactForm.reset();
     setTimeout(function () { formStatus.textContent = ''; }, 5000);
   });
-
-});
