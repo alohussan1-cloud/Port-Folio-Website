@@ -1,6 +1,3 @@
-/* =========================================================
-   ALI HASSAN — PORTFOLIO SCRIPT
-========================================================= */
 
   /* ---------- LOADER ---------- */
   let loader = document.getElementById('loader');
@@ -10,8 +7,6 @@
     }, 500);
   });
 
-  /* ---------- FOOTER YEAR ---------- */
-  document.getElementById('year').textContent = new Date().getFullYear();
 
   /* ---------- CURSOR GLOW ---------- */
   const glow = document.getElementById('cursorGlow');
@@ -51,6 +46,7 @@
   }
   handleNavbarScroll();
   window.addEventListener('scroll', handleNavbarScroll);
+  
 
   /* ---------- HAMBURGER MENU ---------- */
   let hamburger = document.getElementById('hamburger');
@@ -96,11 +92,14 @@
     });
   }, { threshold: 0.15 });
 
-  reveal.forEach(function (el) { revealObserver.observe(el); });
+  reveal.forEach(function (el){
+     Observer.observe(el); 
+  });
+
 
   /* ---------- SKILL PROGRESS BARS ---------- */
-  var progressFills = document.querySelectorAll('.progress-fill');
-  var progressObserver = new IntersectionObserver(function (entries, obs) {
+  let progressFills = document.querySelectorAll('.progress-fill');
+  let progressObserver = new IntersectionObserver(function (entries, obs) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
         var el = entry.target;
@@ -113,79 +112,7 @@
 
   progressFills.forEach(function (el) { progressObserver.observe(el); });
 
-  /* ---------- ANIMATED COUNTERS ---------- */
-  var statNums = document.querySelectorAll('.stat-num');
-  var counterObserver = new IntersectionObserver(function (entries, obs) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        animateCounter(entry.target);
-        obs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  statNums.forEach(function (el) { counterObserver.observe(el); });
-
-  function animateCounter(el) {
-    var target = parseInt(el.getAttribute('data-target'), 10);
-    var duration = 1600;
-    var startTime = null;
-
-    function step(timestamp) {
-      if (!startTime) startTime = timestamp;
-      var progress = Math.min((timestamp - startTime) / duration, 1);
-      var value = Math.floor(progress * target);
-      el.textContent = value;
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      } else {
-        el.textContent = target;
-      }
-    }
-    requestAnimationFrame(step);
-  }
-
-  /* ---------- TESTIMONIAL SLIDER ---------- */
-  var track = document.getElementById('testimonialTrack');
-  var dotsContainer = document.getElementById('sliderDots');
-  var slides = track.children;
-  var currentSlide = 0;
-  var slideCount = slides.length;
-  var autoSlideTimer;
-
-  for (var s = 0; s < slideCount; s++) {
-    var dot = document.createElement('button');
-    dot.setAttribute('aria-label', 'Go to testimonial ' + (s + 1));
-    if (s === 0) dot.classList.add('active');
-    (function (index) {
-      dot.addEventListener('click', function () {
-        goToSlide(index);
-        resetAutoSlide();
-      });
-    })(s);
-    dotsContainer.appendChild(dot);
-  }
-  var dots = dotsContainer.children;
-
-  function goToSlide(index) {
-    currentSlide = index;
-    track.style.transform = 'translateX(-' + (index * 100) + '%)';
-    for (var d = 0; d < dots.length; d++) {
-      dots[d].classList.toggle('active', d === index);
-    }
-  }
-
-  function nextSlide() {
-    goToSlide((currentSlide + 1) % slideCount);
-  }
-
-  function resetAutoSlide() {
-    clearInterval(autoSlideTimer);
-    autoSlideTimer = setInterval(nextSlide, 5000);
-  }
-
-  resetAutoSlide();
-
+  
   /* ---------- BACK TO TOP ---------- */
   var backToTop = document.getElementById('backToTop');
   window.addEventListener('scroll', function () {
@@ -221,3 +148,7 @@
     contactForm.reset();
     setTimeout(function () { formStatus.textContent = ''; }, 5000);
   });
+
+
+    /* ---------- FOOTER YEAR ---------- */
+  document.getElementById('year').textContent = new Date().getFullYear();
