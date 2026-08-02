@@ -1,11 +1,3 @@
-/* =========================================================
-   ALI HASSAN — PORTFOLIO RESPONSIVENESS
-   All @media rules live here, separate from style.css.
-   Breakpoints: 1024 / 860 / 640 / 480 / 360
-========================================================= */
-
-/* Extra safety net: never allow horizontal scroll no matter
-   what content/animation runs on a small screen. */
 html,
 body {
   max-width: 100%;
@@ -60,6 +52,10 @@ body {
     justify-content: center;
   }
 
+  .about-grid {
+  grid-template-columns: 1fr;
+  gap: 40px;
+  }
   .eyebrow {
     justify-content: center;
   }
@@ -182,6 +178,20 @@ body {
     margin-bottom: 40px;
   }
 
+  .info-card {
+  padding: 24px;
+}
+
+.info-row {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.info-value {
+  text-align: left;
+}
+
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -229,22 +239,6 @@ body {
 
   .footer-links {
     align-items: center;
-  }
-
-  .timeline {
-    padding-left: 26px;
-  }
-
-  .timeline-dot {
-    left: -26px;
-  }
-
-  .timeline-content {
-    padding: 16px 18px;
-  }
-
-  .testimonial-card {
-    padding: 28px 20px;
   }
 
   .quote {
@@ -389,10 +383,6 @@ body {
 
   .contact-form {
     padding: 18px;
-  }
-
-  .testimonial-card {
-    padding: 22px 16px;
   }
 
   .btn {
