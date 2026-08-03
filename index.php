@@ -4,14 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ali Hassan | Frontend & PHP Developer</title>
-<meta name="description" content="Ali Hassan is a Frontend and PHP Developer building fast, clean, modern web experiences for clients and freelance projects.">
-<meta name="keywords" content="Ali Hassan, Frontend Developer, PHP Developer, Web Developer, JavaScript, Portfolio">
-<meta name="author" content="Ali Hassan">
-
-<meta property="og:title" content="Ali Hassan | Frontend & PHP Developer">
-<meta property="og:description" content="Building fast, clean, modern web experiences.">
-<meta property="og:type" content="website">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -41,7 +33,6 @@
       <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
       <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
       <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
-      <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
       <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
     </ul>
 
@@ -84,13 +75,7 @@
         <a href="https://linkedin.com/in/ali-hassan-webdeveloper" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
           <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.59 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
         </a>
-        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon">
-          <svg viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.15h-3.1V7.8c0-.91.25-1.53 1.56-1.53h1.67V3.46A22.5 22.5 0 0 0 14.2 3.3c-2.42 0-4.08 1.48-4.08 4.19v2.36H7.4V12.85h2.72v8h3.38Z"/></svg>
-        </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.02-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16Zm0 5.4a4.44 4.44 0 1 0 0 8.88 4.44 4.44 0 0 0 0-8.88Zm0 7.33a2.89 2.89 0 1 1 0-5.78 2.89 2.89 0 0 1 0 5.78Zm4.62-7.51a1.04 1.04 0 1 1 0-2.08 1.04 1.04 0 0 1 0 2.08Z"/></svg>
-        </a>
-        <a href="mailto:ali.hassan@example.com" aria-label="Email" class="social-icon">
+        <a href="mailto:alohussan1@example.com" aria-label="Email" class="social-icon">
           <svg viewBox="0 0 24 24"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.5 7.3 5.6a.8.8 0 0 0 1 0L19.8 6H4.2Zm15.8 1.6-7.1 5.4a2.8 2.8 0 0 1-3.4 0L4.4 7.6V18.5c0 .06.04.1.1.1h15c.06 0 .1-.04.1-.1V7.6Z"/></svg>
         </a>
       </div>
@@ -113,33 +98,62 @@
 <!-- ================= ABOUT SECTION ================= -->
 <section class="about" id="about">
   <div class="section-container">
-    <div class="about-content reveal-up">
-      <p class="section-eyebrow center">About Me</p>
-      <h2 class="section-title center">Turning ideas into interfaces people enjoy using</h2>
-      <div class="about-divider"></div>
+    <div class="about-grid">
 
-      <p class="about-text">
-        I'm a front-end focused web developer from Pakistan, currently sharpening my
-        full-stack skills by shipping real projects instead of just following tutorials.
-        My core strength is HTML &amp; CSS — I obsess over spacing, hierarchy, and motion —
-        and I'm steadily leveling up my JavaScript and PHP to build complete, working products.
-      </p>
-      <p class="about-text">
-        What drives me is the moment a layout finally feels right: the grid breathes,
-        the type sits correctly, and the interaction feels alive. I'm currently deep in
-        vanilla JavaScript, PHP &amp; MySQL, and building small e-commerce systems from scratch.
-      </p>
+      <div class="about-left reveal-left">
+        <p class="section-eyebrow">About Me</p>
+        <h2 class="section-title">Turning ideas into interfaces people enjoy using</h2>
 
-      <div class="about-list">
-        <div class="about-list-item"><span class="dot"></span> Currently building PHP + MySQL e-commerce projects</div>
-        <div class="about-list-item"><span class="dot"></span> Passionate about clean, accessible, pixel-precise UI</div>
-        <div class="about-list-item"><span class="dot"></span> Comfortable with Git/GitHub workflows &amp; REST APIs</div>
+        <p class="about-text">
+          I'm a front-end focused web developer from Pakistan, currently sharpening my
+          full-stack skills by shipping real projects instead of just following tutorials.
+          My core strength is HTML &amp; CSS — I obsess over spacing, hierarchy, and motion —
+          and I'm steadily leveling up my JavaScript and PHP to build complete, working products.
+        </p>
+        <p class="about-text">
+          What drives me is the moment a layout finally feels right: the grid breathes,
+          the type sits correctly, and the interaction feels alive. I'm currently deep in
+          vanilla JavaScript, PHP &amp; MySQL, and building small e-commerce systems from scratch.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="assets/cv/Ali-Hassan-CV.pdf" class="btn btn-primary ripple" download>Download CV</a>
+          <a href="#contact" class="btn btn-ghost ripple">Contact Me</a>
+        </div>
       </div>
 
-      <div class="hero-buttons center">
-        <a href="assets/cv/Ali-Hassan-CV.pdf" class="btn btn-primary ripple" download>Download CV</a>
-        <a href="#contact" class="btn btn-ghost ripple">Contact Me</a>
+      <div class="about-right reveal-right">
+        <div class="info-card">
+  <p class="info-card-title">Quick Facts</p>
+
+  <div class="info-row">
+    <span class="info-label">Based In</span>
+    <span class="info-value">Pakistan</span>
+  </div>
+  <div class="info-row">
+    <span class="info-label">Front End</span>
+    <span class="info-value">HTML, CSS & JavaScript</span>
+  </div>
+  <div class="info-row">
+    <span class="info-label">Back-End</span>
+    <span class="info-value">PHP & MySQL</span>
+  </div>
+  <div class="info-row">
+    <span class="info-label">Version COntrol</span>
+    <span class="info-value">Git & GitHub</span>
+  </div>
+  <div class="info-row">
+    <span class="info-label">Availability</span>
+    <span class="info-value">Available for Jobs and Freelance</span>
+  </div>
+  <div class="info-row">
+    <span class="info-label">Open to</span>
+    <span class="info-value">Remote, Onsite & Hybrid opportunities</span>
+  </div>
+
+</div>
       </div>
+
     </div>
   </div>
 </section>
@@ -176,7 +190,7 @@
           <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3Zm9.6 15c.9 1.6 2.1 2.8 4.2 2.8 1.8 0 3-1 3-2.3 0-1.6-1.3-2.2-3.4-3.1l-.6-.3c-1.7-.7-2.8-1.6-2.8-3.6 0-1.8 1.4-3.2 3.5-3.2 1.5 0 2.6.5 3.4 2l-1.9 1.2c-.4-.8-.9-1-1.5-1-.7 0-1.1.4-1.1 1 0 .8.4 1.1 1.9 1.7l.6.3c2 .9 3.2 1.7 3.2 3.8 0 2.2-1.7 3.4-4 3.4-2.3 0-3.7-1.1-4.4-2.5l2-1.2Zm-8.3.2c.4.7.8 1.3 1.6 1.3.8 0 1.3-.3 1.3-1.6V9h2.4v8c0 2.4-1.4 3.5-3.4 3.5-1.9 0-3-1-3.5-2.1l2-1.2Z"/></svg>
         </div>
         <h3>JavaScript</h3>
-        <div class="progress-track"><div class="progress-fill" data-percent="70"></div></div>
+        <div class="progress-track"><div class="progress-fill" data-percent="65"></div></div>
         <span class="progress-label">Intermediate</span>
       </div>
 
@@ -185,8 +199,8 @@
           <svg viewBox="0 0 24 24"><path d="M12 6.5c-5.5 0-10 2.6-10 5.7s4.5 5.7 10 5.7 10-2.6 10-5.7-4.5-5.7-10-5.7Zm-4.3 7.7-1 .1.6-3H8.4l.3-1.4H6.2l-.5 2.4c-.4 1.9 1.1 2.1 1.9 1.9.5-.1.9-.3.9-.3l.1-1.1s-.3.1-.6.1c-.6 0-.5-.4-.4-.7l.1-.6.1-.5H7c0 .1-.1.1-.1.2ZM12 9.9c-1.1 0-2 .3-2.6.9l.2-.7H8.2l-1.2 5.9h1.4l.7-3.4c.2-.7.7-1.1 1.4-1.1.7 0 1 .4.9 1l-.7 3.5H12l.8-3.7c.3-1.4-.6-2.4-.8-2.4Zm4.9.1h-1.4l-1.2 5.9h1.4l.4-1.9h1c1.3 0 2.4-.9 2.6-2.1.2-1.1-.5-1.9-1.8-1.9Zm.3 2.7h-.7l.4-1.9h.6c.5 0 .8.3.7.9-.1.6-.5 1-1 1Z"/></svg>
         </div>
         <h3>PHP</h3>
-        <div class="progress-track"><div class="progress-fill" data-percent="45"></div></div>
-        <span class="progress-label">Beginner</span>
+        <div class="progress-track"><div class="progress-fill" data-percent="60"></div></div>
+        <span class="progress-label">Intermediate</span>
       </div>
 
       <div class="skill-card reveal-up delay-20">
@@ -194,8 +208,8 @@
           <svg viewBox="0 0 24 24"><path d="M17.7 15.4c-1-.03-1.9.1-2.6.3-.2 0-.5.1-.5.4 0 .2.2.4.4.5.3.1.6.2 1 .3.6.2 1.2.4 1.7.7-.1 0-.1.1 0 .1-.6.5-2.6.1-3-1.1.5.4 1.2.6 2 .5.5-.2 0-.7-.3-.9-.6-.5-1.5-.7-2.1-1.3-1-.9-.4-2.5.8-2.9 1.2-.4 2.6.1 3.2 1.2.2.4.3.9.4 1.2Zm-11.4-.1c-.5.1-1 .3-1 .9 0 .5.5.8 1 .8s1-.3 1-.9c0-.5-.5-.8-1-.8ZM4.8 20c.3.2.7.1 1-.1.5-.4.8-1 .9-1.6.2-1 .1-2.1-.4-3-1-1.9-3.3-2.4-4.9-1-.9.8-1.3 2.1-1 3.3.4 1.5 1.9 2.5 3.4 2.4h1Z"/></svg>
         </div>
         <h3>MySQL</h3>
-        <div class="progress-track"><div class="progress-fill" data-percent="40"></div></div>
-        <span class="progress-label">Beginner</span>
+        <div class="progress-track"><div class="progress-fill" data-percent="60"></div></div>
+        <span class="progress-label">Intermediate</span>
       </div>
 
       <div class="skill-card reveal-up delay-25">
@@ -203,8 +217,8 @@
           <svg viewBox="0 0 24 24"><path d="M23.5 11.3 12.7.5a1.6 1.6 0 0 0-2.3 0l-2.3 2.3 2.9 2.9c.7-.2 1.5 0 2 .6.5.5.7 1.3.5 2l2.8 2.8a1.7 1.7 0 0 1 2 .5c.8.8.8 2 0 2.8-.8.8-2 .8-2.8 0-.6-.6-.7-1.4-.4-2.1L12.5 9.7v6.9c.2.1.4.2.6.4.8.8.8 2 0 2.8-.8.8-2 .8-2.8 0-.8-.8-.8-2 0-2.8.2-.2.5-.4.7-.5V9.6c-.2-.1-.5-.2-.7-.5-.6-.5-.7-1.4-.4-2.1L7.1 4.3.5 10.4a1.6 1.6 0 0 0 0 2.3l10.8 10.8c.6.6 1.7.6 2.3 0l9.9-9.9c.6-.6.6-1.7 0-2.3Z"/></svg>
         </div>
         <h3>Git</h3>
-        <div class="progress-track"><div class="progress-fill" data-percent="65"></div></div>
-        <span class="progress-label">Intermediate</span>
+        <div class="progress-track"><div class="progress-fill" data-percent="40"></div></div>
+        <span class="progress-label">Beginner</span>
       </div>
 
       <div class="skill-card reveal-up delay-30">
@@ -212,8 +226,8 @@
           <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.92 3.19 9.09 7.62 10.56.56.1.76-.24.76-.54v-2.1c-3.1.68-3.76-1.31-3.76-1.31-.5-1.28-1.24-1.62-1.24-1.62-1.02-.7.08-.68.08-.68 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.48-.28-5.08-1.24-5.08-5.5 0-1.22.44-2.21 1.15-2.99-.11-.28-.5-1.42.11-2.96 0 0 .95-.3 3.1 1.14a10.7 10.7 0 0 1 5.64 0c2.15-1.44 3.1-1.14 3.1-1.14.61 1.54.22 2.68.11 2.96.72.78 1.15 1.77 1.15 2.99 0 4.27-2.6 5.21-5.09 5.49.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54 4.42-1.47 7.6-5.64 7.6-10.56C23.02 5.24 18.27.5 12 .5Z"/></svg>
         </div>
         <h3>GitHub</h3>
-        <div class="progress-track"><div class="progress-fill" data-percent="65"></div></div>
-        <span class="progress-label">Intermediate</span>
+        <div class="progress-track"><div class="progress-fill" data-percent="40"></div></div>
+        <span class="progress-label">Beginner</span>
       </div>
 
       <div class="skill-card reveal-up delay-35">
@@ -221,7 +235,7 @@
           <svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 13.7-5.7L20 4v6h-6l2.3-2.3A6 6 0 0 0 6 12H4Zm16 0a8 8 0 0 1-13.7 5.7L4 20v-6h6l-2.3 2.3A6 6 0 0 0 18 12h2Z"/></svg>
         </div>
         <h3>REST APIs</h3>
-        <div class="progress-track"><div class="progress-fill" data-percent="55"></div></div>
+        <div class="progress-track"><div class="progress-fill" data-percent="60"></div></div>
         <span class="progress-label">Intermediate</span>
       </div>
 
@@ -279,151 +293,37 @@
     <p class="section-sub center">A mix of front-end builds and full PHP-powered applications.</p>
 
     <div class="projects-grid">
-
-      <article class="project-card reveal-up">
-        <div class="project-img"><img src="assets/images/projects/expense-tracker.jpg" alt="Expense Tracker app screenshot" loading="lazy"></div>
-        <div class="project-body">
-          <h3>Expense Tracker</h3>
-          <p>A JavaScript budgeting app for logging income and expenses with instant totals and category breakdowns.</p>
-          <div class="tech-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-          <div class="project-links">
-            <a href="https://github.com/alohussan1-cloud" target="_blank" rel="noopener" class="btn btn-ghost sm">GitHub</a>
-            <a href="#" class="btn btn-primary sm">Live Demo</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card reveal-up delay-08">
-        <div class="project-img"><img src="assets/images/projects/weather-app.jpg" alt="Weather App screenshot" loading="lazy"></div>
-        <div class="project-body">
-          <h3>Weather App</h3>
-          <p>Live weather lookup by city using a public REST API, with a clean glassmorphic result card.</p>
-          <div class="tech-tags"><span>JavaScript</span><span>REST API</span><span>CSS</span></div>
-          <div class="project-links">
-            <a href="https://github.com/alohussan1-cloud" target="_blank" rel="noopener" class="btn btn-ghost sm">GitHub</a>
-            <a href="#" class="btn btn-primary sm">Live Demo</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card reveal-up delay-16">
-        <div class="project-img"><img src="assets/images/projects/notes-app.jpg" alt="Notes App screenshot" loading="lazy"></div>
-        <div class="project-body">
-          <h3>Notes App</h3>
-          <p>A local-storage notes manager with create, edit, and delete flows and a distraction-free layout.</p>
-          <div class="tech-tags"><span>JavaScript</span><span>LocalStorage</span></div>
-          <div class="project-links">
-            <a href="https://github.com/alohussan1-cloud" target="_blank" rel="noopener" class="btn btn-ghost sm">GitHub</a>
-            <a href="#" class="btn btn-primary sm">Live Demo</a>
-          </div>
-        </div>
-      </article>
-
       <article class="project-card reveal-up delay-24">
-        <div class="project-img"><img src="assets/images/projects/php-login.jpg" alt="PHP Login System screenshot" loading="lazy"></div>
+        <div class="project-img">
+          <img src="Screenshot (184).png" alt="PHP Login System screenshot" loading="lazy">
+        </div>
         <div class="project-body">
-          <h3>PHP Login System</h3>
-          <p>Secure registration and login built with PHP sessions, password hashing, and prepared statements.</p>
-          <div class="tech-tags"><span>PHP</span><span>MySQL</span><span>Sessions</span></div>
+          <h3>Mobile Store Website</h3>
+          <p>A full-stack e-commerce platform featuring user authentication, product management,
+             an admin dashboard, and responsive UI built with PHP and MySQL.
+          </p>
+          <div class="tech-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span></div>
           <div class="project-links">
-            <a href="https://github.com/alohussan1-cloud" target="_blank" rel="noopener" class="btn btn-ghost sm">GitHub</a>
-            <a href="#" class="btn btn-primary sm">Live Demo</a>
+            <a href="https://github.com/alohussan1-cloud/Mobile-sellling-website" target="_blank" rel="noopener" class="btn btn-ghost sm">GitHub</a>
+            <a href="https://mobilezone.infinityfreeapp.com/" class="btn btn-primary sm" target="_blank">Live Demo</a>
           </div>
         </div>
       </article>
 
-      <article class="project-card reveal-up delay-32">
-        <div class="project-img"><img src="assets/images/projects/admin-dashboard.jpg" alt="Admin Dashboard screenshot" loading="lazy"></div>
-        <div class="project-body">
-          <h3>Admin Dashboard</h3>
-          <p>A PHP admin panel for managing records with search, filters, and CRUD operations on MySQL.</p>
-          <div class="tech-tags"><span>PHP</span><span>MySQL</span><span>Dashboard</span></div>
-          <div class="project-links">
-            <a href="https://github.com/alohussan1-cloud" target="_blank" rel="noopener" class="btn btn-ghost sm">GitHub</a>
-            <a href="#" class="btn btn-primary sm">Live Demo</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card reveal-up delay-40">
-        <div class="project-img"><img src="assets/images/projects/portfolio.jpg" alt="Portfolio website screenshot" loading="lazy"></div>
+       <article class="project-card reveal-up delay-40">
+        <div class="project-img"><img src="Screenshot (190).png" alt="Portfolio website screenshot" loading="lazy"></div>
         <div class="project-body">
           <h3>Portfolio Website</h3>
-          <p>This very site — a hand-built, framework-free portfolio focused on motion and premium detail.</p>
+          <p>This very site — A modern personal portfolio showcasing my projects, skills, animations, responsive design, and interactive UI built with
+             HTML, CSS, and JavaScript.</p>
           <div class="tech-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
           <div class="project-links">
-            <a href="https://github.com/alohussan1-cloud" target="_blank" rel="noopener" class="btn btn-ghost sm">GitHub</a>
+            <a href="https://github.com/alohussan1-cloud/Port-Folio-Website" target="_blank" rel="noopener" class="btn btn-ghost sm">GitHub</a>
             <a href="#" class="btn btn-primary sm">Live Demo</a>
           </div>
         </div>
       </article>
 
-    </div>
-  </div>
-</section>
-
-<!-- ================= EXPERIENCE / JOURNEY SECTION ================= -->
-<section class="experience" id="experience">
-  <div class="section-container">
-    <p class="section-eyebrow center">My Journey</p>
-    <h2 class="section-title center">Experience &amp; Milestones</h2>
-
-    <div class="timeline">
-      <div class="timeline-line" aria-hidden="true"></div>
-
-      <div class="timeline-item reveal-up">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <span class="timeline-tag">Foundations</span>
-          <h3>Started HTML &amp; CSS</h3>
-          <p>Learned the building blocks of the web and how to structure and style a page from scratch.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item reveal-up delay-08">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <span class="timeline-tag">Interactivity</span>
-          <h3>Learned JavaScript</h3>
-          <p>Started making pages interactive — DOM manipulation, events, and dynamic content.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item reveal-up delay-16">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <span class="timeline-tag">Data</span>
-          <h3>Built API Projects</h3>
-          <p>Connected front-ends to real data with public REST APIs like weather and currency services.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item reveal-up delay-24">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <span class="timeline-tag">Backend</span>
-          <h3>Learned PHP &amp; MySQL</h3>
-          <p>Moved into server-side development — forms, databases, and dynamic content generation.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item reveal-up delay-32">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <span class="timeline-tag">Security</span>
-          <h3>Built Authentication Systems</h3>
-          <p>Implemented secure login and registration flows with hashed passwords and session handling.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item reveal-up delay-40">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <span class="timeline-tag">Now</span>
-          <h3>Started Freelancing</h3>
-          <p>Began taking on freelance and personal projects, building a portfolio clients can trust.</p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -436,9 +336,8 @@
       <p class="section-eyebrow">Get In Touch</p>
       <h2 class="section-title">Let's build something great</h2>
       <p class="about-text">Have a project in mind or just want to say hi? My inbox is open.</p>
-
-      <div class="contact-detail"><span class="contact-ic">✉</span><a href="mailto:ali.hassan@example.com">ali.hassan@example.com</a></div>
-      <div class="contact-detail"><span class="contact-ic">☎</span><a href="tel:+920000000000">+92 300 0000000</a></div>
+      <div class="contact-detail"><span class="contact-ic">✉</span><a href="mailto:alohussan1@example.com">alohussan1@example.com</a></div>
+      <div class="contact-detail"><span class="contact-ic">☎</span><a href="tel:+923700661350">+92 370 0661350</a></div>
       <div class="contact-detail"><span class="contact-ic">⚲</span><span>Pakistan · Available Remote</span></div>
 
       <div class="social-icons">
@@ -454,28 +353,7 @@
       </div>
     </div>
 
-    <form class="contact-form reveal-right" id="contactForm" novalidate>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary ripple full">Send Message</button>
-      <p class="form-status" id="formStatus" role="status"></p>
-    </form>
+    <?php include "contact.php" ;  ?>
   </div>
 </section>
 
@@ -506,7 +384,7 @@
         <a href="https://linkedin.com/in/ali-hassan-webdeveloper" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
           <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.59 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
         </a>
-        <a href="mailto:ali.hassan@example.com" aria-label="Email" class="social-icon">
+        <a href="mailto:alohussan1@example.com" aria-label="Email" class="social-icon" target="_blank">
           <svg viewBox="0 0 24 24"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.5 7.3 5.6a.8.8 0 0 0 1 0L19.8 6H4.2Zm15.8 1.6-7.1 5.4a2.8 2.8 0 0 1-3.4 0L4.4 7.6V18.5c0 .06.04.1.1.1h15c.06 0 .1-.04.1-.1V7.6Z"/></svg>
         </a>
       </div>

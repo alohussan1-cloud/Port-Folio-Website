@@ -1,4 +1,3 @@
-
   /* ---------- LOADER ---------- */
   let loader = document.getElementById('loader');
   window.addEventListener('load', function () {
@@ -102,8 +101,8 @@
   let progressObserver = new IntersectionObserver(function (entries, obs) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
-        var el = entry.target;
-        var percent = el.getAttribute('data-percent');
+        let el = entry.target;
+        let percent = el.getAttribute('data-percent');
         el.style.width = percent + '%';
         obs.unobserve(el);
       }
@@ -114,7 +113,7 @@
 
   
   /* ---------- BACK TO TOP ---------- */
-  var backToTop = document.getElementById('backToTop');
+  let backToTop = document.getElementById('backToTop');
   window.addEventListener('scroll', function () {
     backToTop.classList.toggle('show', window.scrollY > 500);
   });
@@ -123,12 +122,12 @@
   });
 
   /* ---------- RIPPLE EFFECT ---------- */
-  var rippleButtons = document.querySelectorAll('.ripple');
+  let rippleButtons = document.querySelectorAll('.ripple');
   rippleButtons.forEach(function (btn) {
     btn.addEventListener('click', function (e) {
-      var rect = btn.getBoundingClientRect();
-      var circle = document.createElement('span');
-      var size = Math.max(rect.width, rect.height);
+      let rect = btn.getBoundingClientRect();
+      let circle = document.createElement('span');
+      let size = Math.max(rect.width, rect.height);
       circle.className = 'ripple-circle';
       circle.style.width = circle.style.height = size + 'px';
       circle.style.left = (e.clientX - rect.left - size / 2) + 'px';
@@ -139,15 +138,15 @@
   });
 
   /* ---------- CONTACT FORM ---------- */
-  var contactForm = document.getElementById('contactForm');
-  var formStatus = document.getElementById('formStatus');
+  // var contactForm = document.getElementById('contactForm');
+  // var formStatus = document.getElementById('formStatus');
 
-  contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    formStatus.textContent = 'Thanks! Your message has been sent — I\'ll reply soon.';
-    contactForm.reset();
-    setTimeout(function () { formStatus.textContent = ''; }, 5000);
-  });
+  // contactForm.addEventListener('submit', function (e) {
+  //   e.preventDefault();
+  //   formStatus.textContent = 'Thanks! Your message has been sent — I\'ll reply soon.';
+  //   contactForm.reset();
+  //   setTimeout(function () { formStatus.textContent = ''; }, 5000);
+  // });
 
 
     /* ---------- FOOTER YEAR ---------- */
