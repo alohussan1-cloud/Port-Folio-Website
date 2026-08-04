@@ -137,16 +137,42 @@
     });
   });
 
-  /* ---------- CONTACT FORM ---------- */
-  // var contactForm = document.getElementById('contactForm');
-  // var formStatus = document.getElementById('formStatus');
 
-  // contactForm.addEventListener('submit', function (e) {
-  //   e.preventDefault();
-  //   formStatus.textContent = 'Thanks! Your message has been sent — I\'ll reply soon.';
-  //   contactForm.reset();
-  //   setTimeout(function () { formStatus.textContent = ''; }, 5000);
-  // });
+   /* ---------- Contact Form ---------- */
+  let form = document.querySelector("form")
+  let status = document.querySelector("#successStatus")
+  let fieldsReqStatus = document.querySelector("#fieldsReqStatus")
+  let submitBtn = document.querySelector('#submitBtn')
+  
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault()
+    fieldsReqStatus.style.display = "none"
+    status.style.display = "none"
+    submitBtn.textContent = "Sending..."
+    submitBtn.disabled = true
+    let formData = new FormData(form)
+    
+    let response = await fetch("contact.php", {
+      method: "POST",
+      body: formData
+    })
+
+    const result = await response.json()
+    console.log(result.success);
+    if(result.success){
+      status.style.display = "block"
+      status.textContent = result.message
+       submitBtn.textContent = "Send Message"
+       submitBtn.disabled = false
+      form.reset()
+    } else{
+      fieldsReqStatus.style.display= "block"
+      fieldsReqStatus.textContent = result.message
+       submitBtn.textContent = "Send Message"
+       submitBtn.disabled = false
+    }
+
+  })
 
 
     /* ---------- FOOTER YEAR ---------- */
