@@ -1,56 +1,91 @@
 <?php
 
-$SERVERNAME = "Localhost";
-$USERNAME = "root";
-$PASSWORD = "";
-$DBNAME = "personalportfolio";
+require_once 'config.php';
 
-$conn = mysqli_connect($SERVERNAME, $USERNAME, $PASSWORD, $DBNAME);
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
+require_once 'vendor/autoload.php';
 
-if(isset($_POST['submit'])){
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
+header("Content-Type: application/json");
+
+  $name = trim($_POST['name']??'');
+  $email = trim($_POST['email']??'');
+  $subject = trim($_POST['subject']??'');
+  $message = trim($_POST['message']??'');
+
+  if(empty($name) || empty($email) || empty($subject) || empty($message)){
+    echo json_encode([
+      "success" => false,
+      "message" => "Please Fill in all required fields."
+    ]);
+    exit;
+  }
+
+  if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+    echo json_encode([
+      "success" => false,
+      "message" => "Invalid email address"
+    ]);
+    exit;
+
+  }
+
      
-    $stmt = mysqli_prepare($conn, "INSERT INTO contact_messages (Name, Email, Subject, Message)
-    values (?,?,?,?)");
+  $stmt = mysqli_prepare($conn, "INSERT INTO contact_messages (Name, Email, Subject, Message)
+  values (?,?,?,?)");
 
-   mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $subject, $message);
-    mysqli_stmt_execute($stmt);
-}
+  mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $subject, $message);
+  $result = mysqli_stmt_execute($stmt);
+
+
+  // Email for contact form //
+    $mail = new PHPMailer(true);
+
+    $mail->isSMTP();
+
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+
+    $mail->Username = "alohussan1@gmail.com";
+    $mail->Password = $mailPassword;
+
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail-> Port = 587;
+
+    $mail->setFrom(
+      'alohussan1@gmail.com',
+      'Portfolio Contact Form'
+    );
+    $mail->addAddress(
+      'alohussan1@gmail.com'
+    );
+
+    $mail->isHTML(true);
+    $mail->Subject = "New Portfolio Message";
+    $mail->Body = "
+    <h2> New Contact Form Submission </h2>
+    <p><strong>Name:</strong> $name</p>
+    <p><strong>Email:</strong> $email</p>
+    <p><strong>Subject:</strong> $subject</p>
+    <p><strong>Message:</strong></p>
+    <p>$message</p>
+    ";
+
+    
+    try{
+    $mail->send();
+    echo json_encode([
+      "success" => true,
+      "message" => "✅ Thanks for contacting me! I'll reach out to you soon."
+      ]);
+
+  } 
+  catch(Exception $e){
+    echo json_encode([
+      "success" => false,
+      "message" => "Email could not be sent! Please try again."
+    ]);
+  }
+
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form method="POST" class="contact-form reveal-right" id="contactForm" >
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
-      <button type="submit" name="submit" class="btn btn-primary ripple full">Send Message</button>
-      <p class="form-status" id="formStatus" role="status"></p>
-    </form>
-</body>
-</html>
