@@ -1176,7 +1176,7 @@ section {
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
+  gap: .5rem;
 }
 
 .form-group {
@@ -1214,10 +1214,15 @@ section {
   background-color: rgba(255, 70, 70, .12);
   color: #ff6b6b;
   border: 1px solid #ff4d4d;
-  padding: 12px 15px;
   border-radius: 8px;
+}
+
+.errors{
+  margin-top:5px;
   font-size: 1rem;
-  margin:15px 0;
+  color: #ff6b6b;
+  font-family: italic;
+
 }
 
 #successStatus{

@@ -201,15 +201,6 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .stats-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-  }
-
-  .stat-card {
-    padding: 24px 14px;
-  }
-
   .about-divider {
     margin-bottom: 24px;
   }
@@ -306,14 +297,6 @@ body {
 
   .project-body {
     padding: 14px;
-  }
-
-  .stats-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .stat-num {
-    font-size: 1.9rem;
   }
 
   .social-icon {
