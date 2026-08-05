@@ -141,12 +141,21 @@
    /* ---------- Contact Form ---------- */
   let form = document.querySelector("form")
   let status = document.querySelector("#successStatus")
-  let fieldsReqStatus = document.querySelector("#fieldsReqStatus")
+  let nameError = document.querySelector("#nameError")
+  let emailError = document.querySelector("#emailError")
+  let subjectError = document.querySelector("#subjectError")
+  let messageError = document.querySelector("#messageError")
+  let invalidEmailError = document.querySelector("#invalidEmailError")
+  let errors = document.querySelectorAll('.errors')
   let submitBtn = document.querySelector('#submitBtn')
+  
+  console.log(nameError);
   
   form.addEventListener("submit", async (e) => {
     e.preventDefault()
-    fieldsReqStatus.style.display = "none"
+    errors.forEach((item)=>{
+      item.style.display = "none"
+    })
     status.style.display = "none"
     submitBtn.textContent = "Sending..."
     submitBtn.disabled = true
@@ -158,20 +167,36 @@
     })
 
     const result = await response.json()
+  
     console.log(result.success);
     if(result.success){
       status.style.display = "block"
       status.textContent = result.message
-       submitBtn.textContent = "Send Message"
-       submitBtn.disabled = false
       form.reset()
-    } else{
-      fieldsReqStatus.style.display= "block"
-      fieldsReqStatus.textContent = result.message
-       submitBtn.textContent = "Send Message"
-       submitBtn.disabled = false
+    } else if(result.errors){
+        if(result.errors.name){
+          nameError.style.display= "block"
+          nameError.textContent = result.errors.name
+        }
+        if(result.errors.email){
+          emailError.style.display= "block"
+          emailError.textContent = result.errors.email
+        }
+        if(result.errors.subject){
+          subjectError.style.display= "block"
+          subjectError.textContent = result.errors.subject
+        }
+        if(result.errors.message){
+          messageError.style.display= "block"
+          messageError.textContent = result.errors.message
+        }
+    } else {
+      invalidEmailError.style.display= "block"
+      // console.log(result.message);
+      invalidEmailError.textContent = result.message
     }
-
+    submitBtn.textContent = "Send Message";
+    submitBtn.disabled = false;
   })
 
 

@@ -14,13 +14,29 @@ header("Content-Type: application/json");
   $subject = trim($_POST['subject']??'');
   $message = trim($_POST['message']??'');
 
-  if(empty($name) || empty($email) || empty($subject) || empty($message)){
+  $errors = []??'';
+  if(empty($name) ){
+    $errors['name']="*Name is required";
+  }
+  if(empty($email) ){
+    $errors['email']="*Email is required";
+  }
+  if(empty($subject) ){
+    $errors['subject']="*Subject is required";
+  }
+  if(empty($message) ){
+    $errors['message']="*Message is required";
+  }
+
+  if(!empty($errors)){
+
     echo json_encode([
       "success" => false,
-      "message" => "Please Fill in all required fields."
-    ]);
-    exit;
+      "errors" => $errors
+      ]);
+      exit;
   }
+    
 
   if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
     echo json_encode([
