@@ -28,29 +28,12 @@ body {
     font-size: 2.1rem;
   }
 
-  .hero-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .hero-text {
-    order: 2;
-  }
-
-  .hero-visual {
-    order: 1;
-    margin-bottom: 20px;
-  }
 
   .hero-desc {
     margin-left: auto;
     margin-right: auto;
   }
 
-  .hero-buttons,
-  .social-icons {
-    justify-content: center;
-  }
 
   .about-grid {
   grid-template-columns: 1fr;
@@ -112,6 +95,10 @@ body {
   .hamburger {
     display: flex;
   }
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
   .avatar-ring {
     width: 280px;
@@ -122,6 +109,7 @@ body {
     width: 250px;
     height: 250px;
   }
+
 }
 
 /* =========================================================
@@ -158,8 +146,8 @@ body {
     height: 194px;
   }
 
-  .floating-chip {
-    display: none;
+  .scroll-cue{
+    bottom: 16px;
   }
 
   .hero-text h1 {
@@ -312,6 +300,14 @@ body {
   .logo {
     font-size: 1.1rem;
   }
+  .footer-grid{
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-bottom{
+    margin-top: 10px;
+  }
+
 }
 
 /* =========================================================
@@ -348,6 +344,10 @@ body {
     height: 150px;
   }
 
+  .floating-chip {
+    display: none;
+  }
+
   .skills-grid {
     grid-template-columns: 1fr;
   }
@@ -371,5 +371,13 @@ body {
   .btn {
     padding: 11px 18px;
     font-size: .84rem;
+  }
+  
+  .footer-grid{
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-bottom{
+    margin-top: 10px;
   }
 }

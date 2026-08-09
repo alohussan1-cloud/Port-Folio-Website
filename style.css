@@ -846,7 +846,7 @@ section {
 
 .info-card-title {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #FFFFFF;
   margin-bottom: 20px;
@@ -873,13 +873,13 @@ section {
 
 .info-label {
   color: #A1A1AA;
-  font-size: .9rem;
+  font-size: 1rem;
 }
 
 .info-value {
   color: #C084FC;
   font-weight: 600;
-  font-size: .9rem;
+  font-size: 1rem;
   text-align: right;
 }
 
@@ -1253,7 +1253,7 @@ section {
 ========================================================= */
 .footer {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 70px;
+  padding:40px 0px;
 }
 
 .footer-grid {
