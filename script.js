@@ -20,10 +20,9 @@
     new Typed('#typed', {
       strings: [
         'Web Developer',
-        'Frontend Developer',
+        'Full-Stack Developer',
         'PHP Developer',
-        'JavaScript Enthusiast',
-        'Freelancer'
+        'JavaScript Developer',
       ],
       typeSpeed: 55,
       backSpeed: 30,
@@ -146,6 +145,7 @@
   let subjectError = document.querySelector("#subjectError")
   let messageError = document.querySelector("#messageError")
   let invalidEmailError = document.querySelector("#invalidEmailError")
+  let emailSendError = document.querySelector("#emailSendError")
   let errors = document.querySelectorAll('.errors')
   let submitBtn = document.querySelector('#submitBtn')
   
@@ -173,6 +173,7 @@
       status.style.display = "block"
       status.textContent = result.message
       form.reset()
+      
     } else if(result.errors){
         if(result.errors.name){
           nameError.style.display= "block"
@@ -190,10 +191,14 @@
           messageError.style.display= "block"
           messageError.textContent = result.errors.message
         }
-    } else {
+    } else if(result.message == "Invalid email address") {
       invalidEmailError.style.display= "block"
       // console.log(result.message);
       invalidEmailError.textContent = result.message
+    } else{
+      emailSendError.style.display= "block"
+      // console.log(result.message);
+      emailSendError.textContent = result.message
     }
     submitBtn.textContent = "Send Message";
     submitBtn.disabled = false;

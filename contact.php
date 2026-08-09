@@ -89,12 +89,12 @@ header("Content-Type: application/json");
     ";
 
     
-    try{
+  try{
     $mail->send();
     echo json_encode([
-      "success" => true,
+     "success" => true,
       "message" => "✅ Thanks for contacting me! I'll reach out to you soon."
-      ]);
+    ]);
 
   } 
   catch(Exception $e){
