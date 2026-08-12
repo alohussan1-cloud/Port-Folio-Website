@@ -886,135 +886,174 @@ section {
 /* =========================================================
    SKILLS
 ========================================================= */
+.skills-section {
+    padding: 90px 20px;
+    background: #07070a;
+    color: #fff;
+}
+
+.skills-container {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-label {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: #b45cff;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    font-size: clamp(30px, 4vw, 42px);
+    font-weight: 700;
+}
+
+.section-heading p {
+    margin: 14px 0 0;
+
+    color: #a9a9b3;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.skill-category {
+    margin-bottom: 42px;
+}
+
+.skill-category h3 {
+    margin: 0 0 18px;
+
+    color: #f5f5f7;
+
+    font-size: 21px;
+    font-weight: 600;
+}
+
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 14px;
 }
 
 .skill-card {
-  padding: 14px 12px;
-  transition: transform .3s ease, border-color .3s ease;
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    min-height: 82px;
+
+    padding: 13px 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
 }
 
 .skill-card:hover {
-  transform: translateY(-6px);
-  border-color: #A855F7;
+    transform: translateY(-3px);
+
+    border-color: rgba(180, 92, 255, 0.45);
+
+    background: rgba(180, 92, 255, 0.07);
 }
 
 .skill-icon {
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 12px;
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 11px;
+
+    font-size: 20px;
 }
 
-.skill-icon svg {
-  width: 20px;
-  height: 20px;
+
+.html-icon {
+    color: #ff7043;
+    background: rgba(255, 112, 67, 0.16);
 }
 
-.skill-icon.icon-html {
-  background: rgba(228, 77, 38, .16);
+
+.css-icon {
+    color: #2196f3;
+    background: rgba(33, 150, 243, 0.16);
 }
 
-.skill-icon.icon-html svg {
-  fill: #E44D26;
+
+.js-icon {
+    color: #f7df1e;
+    background: rgba(247, 223, 30, 0.14);
 }
 
-.skill-icon.icon-css {
-  background: rgba(38, 77, 228, .16);
+
+.php-icon {
+    color: #a9a9d6;
+    background: rgba(120, 120, 180, 0.16);
 }
 
-.skill-icon.icon-css svg {
-  fill: #264DE4;
+
+.mysql-icon {
+    color: #00bcd4;
+    background: rgba(0, 188, 212, 0.14);
 }
 
-.skill-icon.icon-js {
-  background: rgba(240, 219, 79, .16);
+.git-icon {
+    color: #f05032;
+    background: rgba(240, 80, 50, 0.14);
 }
 
-.skill-icon.icon-js svg {
-  fill: #F0DB4F;
+.skill-info h4 {
+    margin: 0 0 5px;
+
+    color: #f5f5f7;
+
+    font-size: 16px;
+    font-weight: 600;
 }
 
-.skill-icon.icon-php {
-  background: rgba(119, 123, 180, .16);
+.skill-info span {
+    display: inline-block;
+
+    padding: 3px 8px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: #a9a9b3;
+
+    font-size: 11px;
+    font-weight: 500;
 }
 
-.skill-icon.icon-php svg {
-  fill: #777BB4;
-}
 
-.skill-icon.icon-mysql {
-  background: rgba(68, 121, 161, .16);
-}
-
-.skill-icon.icon-mysql svg {
-  fill: #4479A1;
-}
-
-.skill-icon.icon-git {
-  background: rgba(240, 80, 50, .16);
-}
-
-.skill-icon.icon-git svg {
-  fill: #F05032;
-}
-
-.skill-icon.icon-github {
-  background: rgba(255, 255, 255, .12);
-}
-
-.skill-icon.icon-github svg {
-  fill: #FFFFFF;
-}
-
-.skill-icon.icon-rest {
-  background: rgba(168, 85, 247, .16);
-}
-
-.skill-icon.icon-rest svg {
-  fill: #A855F7;
-}
-
-.skill-icon.icon-responsive {
-  background: rgba(192, 132, 252, .16);
-}
-
-.skill-icon.icon-responsive svg {
-  fill: #C084FC;
-}
-
-.skill-card h3 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: .95rem;
-  margin-bottom: 10px;
-}
-
-.progress-track {
-  height: 5px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, .08);
-  overflow: hidden;
-  margin-bottom: 6px;
-}
-
-.progress-fill {
-  height: 100%;
-  width: 0%;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #7C3AED, #A855F7 55%, #C084FC);
-  transition: width 1.2s ease;
-}
-
-.progress-label {
-  font-size: .72rem;
-  color: #A1A1AA;
-}
 
 /* =========================================================
    SERVICES
@@ -1027,13 +1066,16 @@ section {
 
 .service-card {
   padding: 40px 30px;
-  transition: transform .3s ease, border-color .3s ease;
+    position: relative;
+    overflow: hidden;
+   transition: 0.3s ease;
   background: linear-gradient(135deg, rgba(124, 58, 237, .18), rgba(192, 132, 252, .06));
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
-  border-color: #A855F7;
+    transform: translateY(-5px);
+    border-color: rgba(180, 92, 255, 0.45);
+    box-shadow: 0 10px 30px rgba(168, 85, 247, 0.12);
 }
 
 .service-icon {
@@ -1045,6 +1087,24 @@ section {
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, .05);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.12);
+}
+
+.service-arrow {
+    position: absolute;
+    right: 20px;
+    bottom: 18px;
+    font-size: 17px;
+    opacity: 0.8;
+    color: #a855f7;
+    font-size: 20px;
+
+    transition: 0.3s ease;
+}
+
+.service-card:hover .service-arrow {
+    opacity: 1;
+    transform: translate(3px, -3px);
 }
 
 .service-icon svg {

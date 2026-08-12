@@ -1,164 +1,247 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ali Hassan | Frontend & PHP Developer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ali Hassan | Frontend & PHP Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="responsive.css">
-</head>
-<body>
-
-<!-- ================= LOADING SCREEN ================= -->
-<div id="loader" aria-hidden="true">
-  <div class="loader-mark">AH</div>
-  <div class="loader-bar"><span></span></div>
-</div>
-
-<!-- ================= CURSOR GLOW ================= -->
-<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
-
-<!-- ================= NAVBAR ================= -->
-<header class="navbar" id="navbar">
-  <nav class="nav-container">
-    <a href="#home" class="logo">Ali<span>Hassan</span></a>
-
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
-      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
-      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
-      <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
-      <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
-      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
-    </ul>
-
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-</header>
-
-<main>
-
-<!-- ================= HERO SECTION ================= -->
-<section class="hero" id="home">
-  <div class="hero-blobs" aria-hidden="true">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-  </div>
-
-  <div class="hero-container">
-    <div class="hero-text reveal-up">
-      <p class="eyebrow">Available for freelance work</p>
-      <h1>Hi, I'm <span class="gradient-text">Ali Hassan</span></h1>
-      <h2 class="typed-wrap">I'm a <span id="typed"></span><span class="cursor-blink">|</span></h2>
-      <p class="hero-desc">
-        I design and build clean, fast, and reliable websites — from pixel-accurate
-        front-ends to PHP-powered back-ends. I care about the small details that make
-        an interface feel premium, and the solid code that keeps it running.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="assets/cv/Ali-Hassan-CV.pdf" class="btn btn-primary ripple" download>Download CV</a>
-        <a href="#contact" class="btn btn-secondary ripple">Hire Me</a>
-      </div>
-
-      <div class="social-icons">
-        <a href="https://github.com/alohussan1-cloud" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.92 3.19 9.09 7.62 10.56.56.1.76-.24.76-.54v-2.1c-3.1.68-3.76-1.31-3.76-1.31-.5-1.28-1.24-1.62-1.24-1.62-1.02-.7.08-.68.08-.68 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.48-.28-5.08-1.24-5.08-5.5 0-1.22.44-2.21 1.15-2.99-.11-.28-.5-1.42.11-2.96 0 0 .95-.3 3.1 1.14a10.7 10.7 0 0 1 5.64 0c2.15-1.44 3.1-1.14 3.1-1.14.61 1.54.22 2.68.11 2.96.72.78 1.15 1.77 1.15 2.99 0 4.27-2.6 5.21-5.09 5.49.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54 4.42-1.47 7.6-5.64 7.6-10.56C23.02 5.24 18.27.5 12 .5Z"/></svg>
-        </a>
-        <a href="https://linkedin.com/in/ali-hassan-webdeveloper" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
-          <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.59 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
-        </a>
-        <a href="mailto:alohussan1@example.com" aria-label="Email" class="social-icon">
-          <svg viewBox="0 0 24 24"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.5 7.3 5.6a.8.8 0 0 0 1 0L19.8 6H4.2Zm15.8 1.6-7.1 5.4a2.8 2.8 0 0 1-3.4 0L4.4 7.6V18.5c0 .06.04.1.1.1h15c.06 0 .1-.04.1-.1V7.6Z"/></svg>
-        </a>
-      </div>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ================= LOADING SCREEN ================= -->
+    <div id="loader" aria-hidden="true">
+      <div class="loader-mark">AH</div>
+      <div class="loader-bar"><span></span></div>
     </div>
 
-    <div class="hero-visual reveal-up delay-15">
-      <div class="avatar-ring">
-        <div class="avatar-glow"></div>
-        <img src="ProfilePic.jpg" alt="Portrait of Ali Hassan" loading="lazy" class="avatar-img">
-      </div>
-      <div class="floating-chip chip-1">&lt;/&gt; PHP</div>
-      <div class="floating-chip chip-2">JavaScript</div>
-      <div class="floating-chip chip-3">Responsive UI</div>
-    </div>
-  </div>
+    <!-- ================= CURSOR GLOW ================= -->
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
-  <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
-</section>
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar" id="navbar">
+      <nav class="nav-container">
+        <a href="#home" class="logo">Ali<span>Hassan</span></a>
 
-<!-- ================= ABOUT SECTION ================= -->
-<section class="about" id="about">
-  <div class="section-container">
-    <div class="about-grid">
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a href="#home" class="nav-link active" data-section="home">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="nav-link" data-section="about">About</a>
+          </li>
+          <li>
+            <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+          </li>
+          <li>
+            <a href="#services" class="nav-link" data-section="services"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="nav-link" data-section="projects"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="nav-link" data-section="contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
 
-      <div class="about-left reveal-left">
-        <p class="section-eyebrow">About Me</p>
-        <h2 class="section-title">Turning ideas into interfaces people enjoy using</h2>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
 
-        <p class="about-text">
-          I'm a full-stack web developer who enjoys building things from ground up- from designing 
-          responsive interfaces to developing the back-end logic that powers them. My main tools include
-          HTML, CSS, JavaScript, PHP, and MySQL. 
-        </p>
-        <p class="about-text">
-          i learn best by building real projects, solving problems, and improving what
-          I have already created. I pay close attention to design, responsiveness, performance, 
-          and clean code because I believe a good website should not only look good, but work reliably too.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="assets/cv/Ali-Hassan-CV.pdf" class="btn btn-primary ripple" download>Download CV</a>
-          <a href="#contact" class="btn btn-ghost ripple">Contact Me</a>
+    <main>
+      <!-- ================= HERO SECTION ================= -->
+      <section class="hero" id="home">
+        <div class="hero-blobs" aria-hidden="true">
+          <div class="blob blob-1"></div>
+          <div class="blob blob-2"></div>
+          <div class="blob blob-3"></div>
         </div>
-      </div>
 
-      <div class="about-right reveal-right">
-        <div class="info-card">
-  <p class="info-card-title">Quick Facts</p>
+        <div class="hero-container">
+          <div class="hero-text reveal-up">
+            <p class="eyebrow">Available for freelance work</p>
+            <h1>Hi, I'm <span class="gradient-text">Ali Hassan</span></h1>
+            <h2 class="typed-wrap">
+              I'm a <span id="typed"></span><span class="cursor-blink">|</span>
+            </h2>
+            <p class="hero-desc">
+              I design and build clean, fast, and reliable websites — from
+              pixel-accurate front-ends to PHP-powered back-ends. I care about
+              the small details that make an interface feel premium, and the
+              solid code that keeps it running.
+            </p>
 
-  <div class="info-row">
-    <span class="info-label">Based in</span>
-    <span class="info-value">Pakistan</span>
-  </div>
-  <div class="info-row">
-    <span class="info-label">Frontend</span>
-    <span class="info-value">HTML, CSS & JavaScript</span>
-  </div>
-  <div class="info-row">
-    <span class="info-label">Backend</span>
-    <span class="info-value">PHP & MySQL</span>
-  </div>
-  <div class="info-row">
-    <span class="info-label">Version Control</span>
-    <span class="info-value">Git & GitHub</span>
-  </div>
-  <div class="info-row">
-    <span class="info-label">Availability</span>
-    <span class="info-value">Available for Jobs and Freelance</span>
-  </div>
-  <div class="info-row">
-    <span class="info-label">Open to</span>
-    <span class="info-value">Remote, Onsite & Hybrid opportunities</span>
-  </div>
+            <div class="hero-buttons">
+              <a
+                href="assets/cv/Ali-Hassan-CV.pdf"
+                class="btn btn-primary ripple"
+                download
+                >Download CV</a
+              >
+              <a href="#contact" class="btn btn-secondary ripple">Hire Me</a>
+            </div>
 
-</div>
-      </div>
+            <div class="social-icons">
+              <a
+                href="https://github.com/alohussan1-cloud"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+                class="social-icon"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.92 3.19 9.09 7.62 10.56.56.1.76-.24.76-.54v-2.1c-3.1.68-3.76-1.31-3.76-1.31-.5-1.28-1.24-1.62-1.24-1.62-1.02-.7.08-.68.08-.68 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.48-.28-5.08-1.24-5.08-5.5 0-1.22.44-2.21 1.15-2.99-.11-.28-.5-1.42.11-2.96 0 0 .95-.3 3.1 1.14a10.7 10.7 0 0 1 5.64 0c2.15-1.44 3.1-1.14 3.1-1.14.61 1.54.22 2.68.11 2.96.72.78 1.15 1.77 1.15 2.99 0 4.27-2.6 5.21-5.09 5.49.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54 4.42-1.47 7.6-5.64 7.6-10.56C23.02 5.24 18.27.5 12 .5Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://linkedin.com/in/ali-hassan-webdeveloper"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+                class="social-icon"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.59 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="mailto:alohussan1@example.com"
+                aria-label="Email"
+                class="social-icon"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.5 7.3 5.6a.8.8 0 0 0 1 0L19.8 6H4.2Zm15.8 1.6-7.1 5.4a2.8 2.8 0 0 1-3.4 0L4.4 7.6V18.5c0 .06.04.1.1.1h15c.06 0 .1-.04.1-.1V7.6Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
 
-    </div>
-  </div>
-</section>
+          <div class="hero-visual reveal-up delay-15">
+            <div class="avatar-ring">
+              <div class="avatar-glow"></div>
+              <img
+                src="ProfilePic.jpg"
+                alt="Portrait of Ali Hassan"
+                loading="lazy"
+                class="avatar-img"
+              />
+            </div>
+            <div class="floating-chip chip-1">&lt;/&gt; PHP</div>
+            <div class="floating-chip chip-2">JavaScript</div>
+            <div class="floating-chip chip-3">Responsive UI</div>
+          </div>
+        </div>
 
-<!-- ================= SKILLS SECTION ================= -->
-<section class="skills" id="skills">
+        <a href="#about" class="scroll-cue" aria-label="Scroll down"
+          ><span></span
+        ></a>
+      </section>
+
+      <!-- ================= ABOUT SECTION ================= -->
+      <section class="about" id="about">
+        <div class="section-container">
+          <div class="about-grid">
+            <div class="about-left reveal-left">
+              <p class="section-eyebrow">About Me</p>
+              <h2 class="section-title">
+                Turning ideas into interfaces people enjoy using
+              </h2>
+
+              <p class="about-text">
+                I'm a full-stack web developer who enjoys building things from
+                ground up- from designing responsive interfaces to developing
+                the back-end logic that powers them. My main tools include HTML,
+                CSS, JavaScript, PHP, and MySQL.
+              </p>
+              <p class="about-text">
+                i learn best by building real projects, solving problems, and
+                improving what I have already created. I pay close attention to
+                design, responsiveness, performance, and clean code because I
+                believe a good website should not only look good, but work
+                reliably too.
+              </p>
+
+              <div class="hero-buttons">
+                <a
+                  href="assets/cv/Ali-Hassan-CV.pdf"
+                  class="btn btn-primary ripple"
+                  download
+                  >Download CV</a
+                >
+                <a href="#contact" class="btn btn-ghost ripple">Contact Me</a>
+              </div>
+            </div>
+
+            <div class="about-right reveal-right">
+              <div class="info-card">
+                <p class="info-card-title">Quick Facts</p>
+
+                <div class="info-row">
+                  <span class="info-label">Based in</span>
+                  <span class="info-value">Pakistan</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">Frontend</span>
+                  <span class="info-value">HTML, CSS & JavaScript</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">Backend</span>
+                  <span class="info-value">PHP & MySQL</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">Version Control</span>
+                  <span class="info-value">Git & GitHub</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">Availability</span>
+                  <span class="info-value"
+                    >Available for Jobs and Freelance</span
+                  >
+                </div>
+                <div class="info-row">
+                  <span class="info-label">Open to</span>
+                  <span class="info-value"
+                    >Remote, Onsite & Hybrid opportunities</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SKILLS SECTION ================= -->
+      <!-- <section class="skills" id="skills">
   <div class="section-container">
     <p class="section-eyebrow center">My Toolkit</p>
     <h2 class="section-title center">Skills &amp; Technologies</h2>
@@ -249,183 +332,455 @@
 
     </div>
   </div>
-</section>
+</section> -->
 
-<!-- ================= SERVICES SECTION ================= -->
-<section class="services" id="services">
-  <div class="section-container">
-    <p class="section-eyebrow center">What I Do</p>
-    <h2 class="section-title center">Services</h2>
-    <p class="section-sub center">Focused help for the front-end and back-end work your project actually needs.</p>
+      <section class="skills-section" id="skills">
+        <div class="skills-container">
+          <div class="section-heading">
+            <span class="section-label">MY SKILLS</span>
 
-    <div class="services-grid">
-      <div class="service-card reveal-up">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M8 4 2 12l6 8M16 4l6 8-6 8M14 3l-4 18"/></svg>
-        </div>
-        <h3>Frontend Development</h3>
-        <p>Responsive, accessible interfaces built with clean semantic HTML and modern CSS — pixel-accurate and fast on every screen.</p>
-      </div>
-      <div class="service-card reveal-up delay-10">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M4 6h16v4H4V6Zm0 6h10v8H4v-8Zm12 0h4v8h-4v-8Z"/></svg>
-        </div>
-        <h3>PHP Web Development</h3>
-        <p>Dynamic PHP &amp; MySQL back-ends: authentication, dashboards, and small e-commerce systems built on solid, secure foundations.</p>
-      </div>
-      <div class="service-card reveal-up delay-20">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2 3 6v6c0 5 4 9 9 10 5-1 9-5 9-10V6l-9-4Zm0 5 2 4 4 .5-3 3 .8 4.3L12 16l-3.8 2.8L9 14.5l-3-3 4-.5 2-4Z"/></svg>
-        </div>
-        <h3>Website Maintenance</h3>
-        <p>Bug fixes, performance tuning, and incremental improvements to keep an existing site fast, secure, and up to date.</p>
-      </div>
-    </div>
-  </div>
-</section>
+            <h2>Technologies I Work With</h2>
 
-<!-- ================= PROJECTS SECTION ================= -->
-<section class="projects" id="projects">
-  <div class="section-container">
-    <p class="section-eyebrow center">Recent Work</p>
-    <h2 class="section-title center">Projects</h2>
-    <p class="section-sub center">A mix of front-end builds and full PHP-powered applications.</p>
+            <p>
+              The technologies and tools I use to build responsive and
+              functional web applications.
+            </p>
+          </div>
 
-    <div class="projects-grid">
-      <article class="project-card reveal-up delay-24">
-        <div class="project-img">
-          <img src="Screenshot (184).png" alt="PHP Login System screenshot" loading="lazy">
+          <!-- Frontend -->
+          <div class="skill-category">
+            <h3>Frontend</h3>
+
+            <div class="skills-grid">
+              <div class="skill-card">
+                <div class="skill-icon html-icon">
+                  <i class="fa-brands fa-html5"></i>
+                </div>
+
+                <div class="skill-info">
+                  <h4>HTML5</h4>
+                  <span>Advanced</span>
+                </div>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon css-icon">
+                  <i class="fa-brands fa-css3-alt"></i>
+                </div>
+
+                <div class="skill-info">
+                  <h4>CSS3</h4>
+                  <span>Advanced</span>
+                </div>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon js-icon">
+                  <i class="fa-brands fa-js"></i>
+                </div>
+
+                <div class="skill-info">
+                  <h4>JavaScript</h4>
+                  <span>Intermediate</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-category">
+            <h3>Backend &amp; Database</h3>
+
+            <div class="skills-grid">
+              <div class="skill-card">
+                <div class="skill-icon php-icon">
+                  <i class="fa-brands fa-php"></i>
+                </div>
+
+                <div class="skill-info">
+                  <h4>PHP</h4>
+                  <span>Intermediate</span>
+                </div>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon mysql-icon">
+                  <i class="fa-solid fa-database"></i>
+                </div>
+
+                <div class="skill-info">
+                  <h4>MySQL</h4>
+                  <span>Intermediate</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-category">
+            <h3>Tools &amp; Workflow</h3>
+
+            <div class="skills-grid">
+              <div class="skill-card">
+                <div class="skill-icon git-icon">
+                  <i class="fa-brands fa-git-alt"></i>
+                </div>
+
+                <div class="skill-info">
+                  <h4>Git & GitHub</h4>
+                  <span>Beginner</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="project-body">
-          <h3>Mobile Store Website</h3>
-          <p>A full-stack e-commerce platform featuring user authentication, product management,
-             an admin dashboard, and responsive UI built with PHP and MySQL.
+      </section>
+
+      <!-- ================= SERVICES SECTION ================= -->
+      <section class="services" id="services">
+        <div class="section-container">
+          <p class="section-eyebrow center">What I Do</p>
+          <h2 class="section-title center">Services</h2>
+          <p class="section-sub center">
+            Focused help for the front-end and back-end work your project
+            actually needs.
           </p>
-          <div class="tech-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span></div>
-          <div class="project-links">
-            <a href="https://github.com/alohussan1-cloud/Mobile-sellling-website" target="_blank" rel="noopener" class="btn btn-ghost sm">GitHub</a>
-            <a href="https://mobilezone.infinityfreeapp.com/" class="btn btn-primary sm" target="_blank">Live Demo</a>
+
+          <div class="services-grid">
+            <div class="service-card reveal-up">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M8 4 2 12l6 8M16 4l6 8-6 8M14 3l-4 18" />
+                </svg>
+              </div>
+              <h3>Frontend Development</h3>
+              <p>
+                Responsive, accessible interfaces built with clean HTML and modern CSS.
+              </p>
+                <span class="service-arrow">↗</span>
+            </div>
+            <div class="service-card reveal-up delay-10">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 6h16v4H4V6Zm0 6h10v8H4v-8Zm12 0h4v8h-4v-8Z" />
+                </svg>
+              </div>
+              <h3>Full-Stack Web Development</h3>
+              <p>
+               Dynamic web applications built with JavaScript, PHP, and MySQL, 
+               including authentication and database functionality.
+              </p>
+                <span class="service-arrow">↗</span>
+            </div>
+            <div class="service-card reveal-up delay-20">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2 3 6v6c0 5 4 9 9 10 5-1 9-5 9-10V6l-9-4Zm0 5 2 4 4 .5-3 3 .8 4.3L12 16l-3.8 2.8L9 14.5l-3-3 4-.5 2-4Z"
+                  />
+                </svg>
+              </div>
+              <h3>Website Development & Maintenance</h3>
+              <p>
+               Bug fixes, content updates, performance improvements, and ongoing website support.
+              </p>
+                <span class="service-arrow">↗</span>
+            </div>
           </div>
         </div>
-      </article>
+      </section>
 
-       <article class="project-card reveal-up delay-40">
-        <div class="project-img"><img src="Screenshot (190).png" alt="Portfolio website screenshot" loading="lazy"></div>
-        <div class="project-body">
-          <h3>Portfolio Website</h3>
-          <p>This very site — A modern personal portfolio showcasing my projects, skills, animations, responsive design, and interactive UI built with
-             HTML, CSS, and JavaScript.</p>
-          <div class="tech-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-          <div class="project-links">
-            <a href="https://github.com/alohussan1-cloud/Port-Folio-Website" target="_blank" rel="noopener" class="btn btn-ghost sm">GitHub</a>
-            <a href="#" class="btn btn-primary sm">Live Demo</a>
+      <!-- ================= PROJECTS SECTION ================= -->
+      <section class="projects" id="projects">
+        <div class="section-container">
+          <p class="section-eyebrow center">Recent Work</p>
+          <h2 class="section-title center">Projects</h2>
+          <p class="section-sub center">
+            A mix of front-end builds and full PHP-powered applications.
+          </p>
+
+          <div class="projects-grid">
+            <article class="project-card reveal-up delay-24">
+              <div class="project-img">
+                <img
+                  src="Screenshot (184).png"
+                  alt="PHP Login System screenshot"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-body">
+                <h3>Mobile Store Website</h3>
+                <p>
+                  A full-stack e-commerce platform featuring user
+                  authentication, product management, an admin dashboard, and
+                  responsive UI built with PHP and MySQL.
+                </p>
+                <div class="tech-tags">
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span
+                  ><span>PHP</span><span>MySQL</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/alohussan1-cloud/Mobile-sellling-website"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-ghost sm"
+                    >GitHub</a
+                  >
+                  <a
+                    href="https://mobilezone.infinityfreeapp.com/"
+                    class="btn btn-primary sm"
+                    target="_blank"
+                    >Live Demo</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal-up delay-40">
+              <div class="project-img">
+                <img
+                  src="Screenshot (190).png"
+                  alt="Portfolio website screenshot"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-body">
+                <h3>Portfolio Website</h3>
+                <p>
+                  This very site — A modern personal portfolio showcasing my
+                  projects, skills, animations, responsive design, and
+                  interactive UI built with HTML, CSS, and JavaScript.
+                </p>
+                <div class="tech-tags">
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/alohussan1-cloud/Port-Folio-Website"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-ghost sm"
+                    >GitHub</a
+                  >
+                  <a href="#" class="btn btn-primary sm">Live Demo</a>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
-      </article>
+      </section>
 
-    </div>
-  </div>
-</section>
+      <!-- ================= CONTACT SECTION ================= -->
+      <section class="contact" id="contact">
+        <div class="section-container contact-grid">
+          <div class="contact-info reveal-left">
+            <p class="section-eyebrow">Get In Touch</p>
+            <h2 class="section-title">Let's build something great</h2>
+            <p class="about-text">
+              Have a project in mind or just want to say hi? My inbox is open.
+            </p>
+            <div class="contact-detail">
+              <span class="contact-ic">✉</span
+              ><a href="mailto:alohussan1@example.com"
+                >alohussan1@example.com</a
+              >
+            </div>
+            <div class="contact-detail">
+              <span class="contact-ic">☎</span
+              ><a href="tel:+923700661350">+92 370 0661350</a>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-ic">⚲</span
+              ><span>Pakistan · Available Remote</span>
+            </div>
 
+            <div class="social-icons">
+              <a
+                href="https://github.com/alohussan1-cloud"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+                class="social-icon"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.92 3.19 9.09 7.62 10.56.56.1.76-.24.76-.54v-2.1c-3.1.68-3.76-1.31-3.76-1.31-.5-1.28-1.24-1.62-1.24-1.62-1.02-.7.08-.68.08-.68 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.48-.28-5.08-1.24-5.08-5.5 0-1.22.44-2.21 1.15-2.99-.11-.28-.5-1.42.11-2.96 0 0 .95-.3 3.1 1.14a10.7 10.7 0 0 1 5.64 0c2.15-1.44 3.1-1.14 3.1-1.14.61 1.54.22 2.68.11 2.96.72.78 1.15 1.77 1.15 2.99 0 4.27-2.6 5.21-5.09 5.49.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54 4.42-1.47 7.6-5.64 7.6-10.56C23.02 5.24 18.27.5 12 .5Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://linkedin.com/in/ali-hassan-webdeveloper"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+                class="social-icon"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.59 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="mailto:ali.hassan@example.com"
+                aria-label="Email"
+                class="social-icon"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.5 7.3 5.6a.8.8 0 0 0 1 0L19.8 6H4.2Zm15.8 1.6-7.1 5.4a2.8 2.8 0 0 1-3.4 0L4.4 7.6V18.5c0 .06.04.1.1.1h15c.06 0 .1-.04.1-.1V7.6Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
 
-<!-- ================= CONTACT SECTION ================= -->
-<section class="contact" id="contact">
-  <div class="section-container contact-grid">
-    <div class="contact-info reveal-left">
-      <p class="section-eyebrow">Get In Touch</p>
-      <h2 class="section-title">Let's build something great</h2>
-      <p class="about-text">Have a project in mind or just want to say hi? My inbox is open.</p>
-      <div class="contact-detail"><span class="contact-ic">✉</span><a href="mailto:alohussan1@example.com">alohussan1@example.com</a></div>
-      <div class="contact-detail"><span class="contact-ic">☎</span><a href="tel:+923700661350">+92 370 0661350</a></div>
-      <div class="contact-detail"><span class="contact-ic">⚲</span><span>Pakistan · Available Remote</span></div>
-
-      <div class="social-icons">
-        <a href="https://github.com/alohussan1-cloud" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.92 3.19 9.09 7.62 10.56.56.1.76-.24.76-.54v-2.1c-3.1.68-3.76-1.31-3.76-1.31-.5-1.28-1.24-1.62-1.24-1.62-1.02-.7.08-.68.08-.68 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.48-.28-5.08-1.24-5.08-5.5 0-1.22.44-2.21 1.15-2.99-.11-.28-.5-1.42.11-2.96 0 0 .95-.3 3.1 1.14a10.7 10.7 0 0 1 5.64 0c2.15-1.44 3.1-1.14 3.1-1.14.61 1.54.22 2.68.11 2.96.72.78 1.15 1.77 1.15 2.99 0 4.27-2.6 5.21-5.09 5.49.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54 4.42-1.47 7.6-5.64 7.6-10.56C23.02 5.24 18.27.5 12 .5Z"/></svg>
-        </a>
-        <a href="https://linkedin.com/in/ali-hassan-webdeveloper" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
-          <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.59 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
-        </a>
-        <a href="mailto:ali.hassan@example.com" aria-label="Email" class="social-icon">
-          <svg viewBox="0 0 24 24"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.5 7.3 5.6a.8.8 0 0 0 1 0L19.8 6H4.2Zm15.8 1.6-7.1 5.4a2.8 2.8 0 0 1-3.4 0L4.4 7.6V18.5c0 .06.04.1.1.1h15c.06 0 .1-.04.1-.1V7.6Z"/></svg>
-        </a>
-      </div>
-    </div>
-
-     <form method="POST" class="contact-form reveal-right" id="contactForm" >
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" >
-          <p class="errors"  id="nameError" role="status" style="display: none;">
+          <form
+            method="POST"
+            class="contact-form reveal-right"
+            id="contactForm"
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" />
+                <p
+                  class="errors"
+                  id="nameError"
+                  role="status"
+                  style="display: none"
+                ></p>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" />
+                <p
+                  class="errors"
+                  id="invalidEmailError"
+                  role="status"
+                  style="display: none"
+                ></p>
+                <p
+                  class="errors"
+                  id="emailError"
+                  role="status"
+                  style="display: none"
+                ></p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" />
+              <p
+                class="errors"
+                id="subjectError"
+                role="status"
+                style="display: none"
+              ></p>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5"></textarea>
+              <p
+                class="errors"
+                id="messageError"
+                role="status"
+                style="display: none"
+              ></p>
+              <p
+                class="errors"
+                id="emailSendError"
+                role="status"
+                style="display: none"
+              ></p>
+            </div>
+            <button
+              type="submit"
+              name="submit"
+              id="submitBtn"
+              class="btn btn-primary ripple full"
+            >
+              Send Message
+            </button>
+            <p id="successStatus" role="status"></p>
+          </form>
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" >
-          <p class="errors"  id="invalidEmailError" role="status" style="display: none;">
-          <p class="errors"  id="emailError" role="status" style="display: none;">
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="section-container footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo">Ali<span>Hassan</span></a>
+          <p>
+            Frontend &amp; PHP developer building clean, modern web experiences.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-social">
+          <h4>Follow</h4>
+          <div class="social-icons">
+            <a
+              href="https://github.com/alohussan1-cloud"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+              class="social-icon"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.92 3.19 9.09 7.62 10.56.56.1.76-.24.76-.54v-2.1c-3.1.68-3.76-1.31-3.76-1.31-.5-1.28-1.24-1.62-1.24-1.62-1.02-.7.08-.68.08-.68 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.48-.28-5.08-1.24-5.08-5.5 0-1.22.44-2.21 1.15-2.99-.11-.28-.5-1.42.11-2.96 0 0 .95-.3 3.1 1.14a10.7 10.7 0 0 1 5.64 0c2.15-1.44 3.1-1.14 3.1-1.14.61 1.54.22 2.68.11 2.96.72.78 1.15 1.77 1.15 2.99 0 4.27-2.6 5.21-5.09 5.49.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54 4.42-1.47 7.6-5.64 7.6-10.56C23.02 5.24 18.27.5 12 .5Z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://linkedin.com/in/ali-hassan-webdeveloper"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+              class="social-icon"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.59 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"
+                />
+              </svg>
+            </a>
+            <a
+              href="mailto:alohussan1@example.com"
+              aria-label="Email"
+              class="social-icon"
+              target="_blank"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.5 7.3 5.6a.8.8 0 0 0 1 0L19.8 6H4.2Zm15.8 1.6-7.1 5.4a2.8 2.8 0 0 1-3.4 0L4.4 7.6V18.5c0 .06.04.1.1.1h15c.06 0 .1-.04.1-.1V7.6Z"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="form-group">
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" >
-        <p class="errors"  id="subjectError" role="status" style="display: none;">
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Ali Hassan. All rights reserved.</p>
       </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" ></textarea>
-        <p class="errors"  id="messageError" role="status" style="display: none;">
-        <p class="errors"  id="emailSendError" role="status" style="display: none;">
-      </div>
-      <button type="submit" name="submit" id="submitBtn" class="btn btn-primary ripple full">Send Message</button>
-      <p  id="successStatus" role="status">
-       
-      </p>
-    </form>
-  </div>
-</section>
+    </footer>
 
-</main>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      ↑
+    </button>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-  <div class="section-container footer-grid">
-    <div class="footer-brand">
-      <a href="#home" class="logo">Ali<span>Hassan</span></a>
-      <p>Frontend &amp; PHP developer building clean, modern web experiences.</p>
-    </div>
-
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-    <div class="footer-social">
-      <h4>Follow</h4>
-      <div class="social-icons">
-        <a href="https://github.com/alohussan1-cloud" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.92 3.19 9.09 7.62 10.56.56.1.76-.24.76-.54v-2.1c-3.1.68-3.76-1.31-3.76-1.31-.5-1.28-1.24-1.62-1.24-1.62-1.02-.7.08-.68.08-.68 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.48-.28-5.08-1.24-5.08-5.5 0-1.22.44-2.21 1.15-2.99-.11-.28-.5-1.42.11-2.96 0 0 .95-.3 3.1 1.14a10.7 10.7 0 0 1 5.64 0c2.15-1.44 3.1-1.14 3.1-1.14.61 1.54.22 2.68.11 2.96.72.78 1.15 1.77 1.15 2.99 0 4.27-2.6 5.21-5.09 5.49.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54 4.42-1.47 7.6-5.64 7.6-10.56C23.02 5.24 18.27.5 12 .5Z"/></svg>
-        </a>
-        <a href="https://linkedin.com/in/ali-hassan-webdeveloper" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
-          <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.59 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
-        </a>
-        <a href="mailto:alohussan1@example.com" aria-label="Email" class="social-icon" target="_blank">
-          <svg viewBox="0 0 24 24"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.5 7.3 5.6a.8.8 0 0 0 1 0L19.8 6H4.2Zm15.8 1.6-7.1 5.4a2.8 2.8 0 0 1-3.4 0L4.4 7.6V18.5c0 .06.04.1.1.1h15c.06 0 .1-.04.1-.1V7.6Z"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; <span id="year"></span> Ali Hassan. All rights reserved.</p>
-  </div>
-</footer>
-
-<button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
-
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
-<script src="script.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
