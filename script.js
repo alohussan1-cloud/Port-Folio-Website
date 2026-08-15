@@ -94,22 +94,6 @@
      Observer.observe(el); 
   });
 
-
-  /* ---------- SKILL PROGRESS BARS ---------- */
-  let progressFills = document.querySelectorAll('.progress-fill');
-  let progressObserver = new IntersectionObserver(function (entries, obs) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        let el = entry.target;
-        let percent = el.getAttribute('data-percent');
-        el.style.width = percent + '%';
-        obs.unobserve(el);
-      }
-    });
-  }, { threshold: 0.4 });
-
-  progressFills.forEach(function (el) { progressObserver.observe(el); });
-
   
   /* ---------- BACK TO TOP ---------- */
   let backToTop = document.getElementById('backToTop');
