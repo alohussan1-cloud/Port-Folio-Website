@@ -166,7 +166,7 @@ section {
   transform: translate(0, 0);
 }
 
-/* Staggered reveal delays (replaces the old --delay custom property) */
+
 .delay-05 {
   transition-delay: .05s;
 }
@@ -303,6 +303,7 @@ section {
 .social-icons {
   display: flex;
   gap: 14px;
+  margin-top: 1.5rem;
 }
 
 .social-icon {
@@ -1240,7 +1241,7 @@ section {
 }
 
 .form-group {
-  margin-bottom: 18px;
+  margin-bottom: 26px;
 }
 
 .form-group label {
@@ -1319,8 +1320,7 @@ section {
 .footer-grid {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 60px;
-  padding-right: 160px;
+  padding-right: 40px;
 }
 
 .footer-brand p {
@@ -1335,18 +1335,21 @@ section {
   font-family: 'Space Grotesk', sans-serif;
   font-size: .95rem;
   margin-bottom: 18px;
+  text-align: center;
 }
 
 .footer-links {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  justify-content: center;
 }
 
 .footer-links a {
   color: #A1A1AA;
   font-size: .92rem;
   transition: color .35s ease;
+  text-align: center;
 }
 
 .footer-links a:hover {
@@ -1359,6 +1362,7 @@ section {
   text-align: center;
   color: #A1A1AA;
   font-size: .85rem;
+  margin-left: 120px;
 }
 
 .back-to-top {
