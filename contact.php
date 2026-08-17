@@ -44,7 +44,6 @@ header("Content-Type: application/json");
       "message" => "Invalid email address"
     ]);
     exit;
-
   }
 
      
