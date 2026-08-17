@@ -65,7 +65,7 @@ body {
   }
 
   .section-title {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
 
   .contact-grid{
@@ -119,9 +119,24 @@ body {
   .hero-text{
     order: 2;
   }
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+
+  .skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: .75fr 1.25fr;
+    gap: 20px;
+  }
+
+  .about-text{
+    font-size: .9rem;
+  }
+
+  .footer-grid {
+  padding-right: 40px;
+}
 
 
 }
@@ -134,6 +149,9 @@ body {
     padding: 70px 0;
   }
 
+  .about-text{
+    font-size: 1.2rem;
+  }
 
   .section-container {
     padding: 0 28px;
@@ -231,6 +249,7 @@ body {
     flex-direction: column;
     text-align: center;
     gap: 32px;
+    padding-right: 40px;
   }
 
   .footer-brand p {
@@ -379,6 +398,8 @@ body {
   .footer-grid{
     display: flex;
     flex-direction: column;
+    padding-right: 20px;
+  
   }
 
   .footer-bottom{

@@ -592,7 +592,7 @@ section {
   padding: 0 32px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 80px;
   align-items: center;
   position: relative;
   z-index: 2;
@@ -1320,7 +1320,7 @@ section {
 .footer-grid {
   display: flex;
   justify-content: space-between;
-  padding-right: 40px;
+  padding-right: 100px;
 }
 
 .footer-brand p {
