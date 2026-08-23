@@ -133,7 +133,6 @@
   let errors = document.querySelectorAll('.errors')
   let submitBtn = document.querySelector('#submitBtn')
   
-  console.log(nameError);
   
   form.addEventListener("submit", async (e) => {
     e.preventDefault()
@@ -152,7 +151,6 @@
 
     const result = await response.json()
   
-    console.log(result.success);
     if(result.success){
       status.style.display = "block"
       status.textContent = result.message
@@ -177,11 +175,9 @@
         }
     } else if(result.message == "Invalid email address") {
       invalidEmailError.style.display= "block"
-      // console.log(result.message);
       invalidEmailError.textContent = result.message
     } else{
       emailSendError.style.display= "block"
-      // console.log(result.message);
       emailSendError.textContent = result.message
     }
     submitBtn.textContent = "Send Message";
